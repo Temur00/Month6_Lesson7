@@ -8,7 +8,6 @@ const Contacts = () => {
   const [showFavorite, setShowFavorite] = useState(false);
   const [contacts, setContacts] = useState(contactsLocal);
   const [search, setSearch] = useState("");
-  // const [sort, setSort] = useState("A-Z");
   const [filter, setFilter] = useState("All");
   const [contactsToSend, setContactsToSend] = useState(contacts);
   const [contactEditing, setContactEditing] = useState(null);
@@ -72,35 +71,6 @@ const Contacts = () => {
     setContactsToSend(newContacts);
   };
 
-  // const handleSortChange = (e) => {
-  //   setSort(e.target.value);
-  //   let newContacts;
-  //   if (e.target.value === "A-Z") {
-  //     newContacts = contacts.sort((a, b) => {
-  //       if (a.firstName < b.firstName) {
-  //         return -1;
-  //       }
-  //       if (a.firstName > b.firstName) {
-  //         return 1;
-  //       }
-  //       return 0;
-  //     });
-  //   } else if (e.target.value === "Z-A") {
-  //     newContacts = contacts.sort((a, b) => {
-  //       if (a.firstName < b.firstName) {
-  //         return 1;
-  //       }
-  //       if (a.firstName > b.firstName) {
-  //         return -1;
-  //       }
-  //       return 0;
-  //     });
-  //   } else {
-  //     newContacts = contacts;
-  //   }
-  //   setContactsToSend(newContacts);
-  // };
-
   return (
     <div className="container py-3 d-flex align-items-start justify-content-between">
       <div className="w-75">
@@ -131,20 +101,6 @@ const Contacts = () => {
             <option value="Design">Design</option>
             <option value="Other">Other</option>
           </select>
-          {/* <select
-            name="sort"
-            id="sort"
-            className="form-select"
-            style={{
-              width: "auto",
-            }}
-            value={sort}
-            onChange={handleSortChange}
-          >
-            <option value="">Sort</option>
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-          </select> */}
         </form>
         <div>
           <div className="d-flex justify-content-between">
