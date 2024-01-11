@@ -8,7 +8,7 @@ const Contacts = () => {
   const [showFavorite, setShowFavorite] = useState(false);
   const [contacts, setContacts] = useState(contactsLocal);
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("A-Z");
+  // const [sort, setSort] = useState("A-Z");
   const [filter, setFilter] = useState("All");
   const [contactsToSend, setContactsToSend] = useState(contacts);
   const [contactEditing, setContactEditing] = useState(null);
@@ -103,7 +103,7 @@ const Contacts = () => {
 
   return (
     <div className="container py-3 d-flex align-items-start justify-content-between">
-      <div className="w-50">
+      <div className="w-75">
         <form className="d-flex mb-3">
           <input
             type="text"
@@ -150,13 +150,17 @@ const Contacts = () => {
           <div className="d-flex justify-content-between">
             <button
               onClick={() => setShowFavorite(false)}
-              className={`btn ${showFavorite ? "" : "btn-primary"} w-auto`}
+              className={`btn ${
+                showFavorite ? "" : "btn-primary"
+              } w-auto text-light`}
             >
               All Students({contacts.length})
             </button>
             <button
               onClick={() => setShowFavorite(true)}
-              className={`btn ${showFavorite ? "btn-primary" : ""} w-auto`}
+              className={`btn ${
+                showFavorite ? "btn-primary" : ""
+              } w-auto text-light`}
             >
               Graduated({contacts.filter((cn) => cn.favorite).length})
             </button>

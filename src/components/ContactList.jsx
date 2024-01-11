@@ -42,7 +42,7 @@ import Table from "react-bootstrap/Table";
 
 const ContactList = ({ contacts, deleteContact, onEdit }) => {
   return (
-    <div className="py-3">
+    <div className="py-3 w-100">
       {contacts.map((contact) => (
         // <div
         //   className="card p-2 mb-2 d-flex flex-row align-items-center justify-content-between"
@@ -85,7 +85,9 @@ const ContactList = ({ contacts, deleteContact, onEdit }) => {
             </thead>
             <tbody>
               <tr>
-                <td className=""> key={contact.id}</td>
+                <td>
+                  <div key={contact.id}></div>{" "}
+                </td>
                 <td>{contact.firstName}</td>
                 <td>{contact.lastName}</td>
                 <td>{contact.age}</td>

@@ -5,6 +5,8 @@ const ContactForm = ({ addContact }) => {
     firstName: "",
     lastName: "",
     phone: "",
+    age: "",
+    email: "",
     category: "Other",
     favorite: false,
   });
@@ -24,91 +26,91 @@ const ContactForm = ({ addContact }) => {
   };
 
   return (
-    <div className=" bg-secondary border border-black-subtle rounded-2 ms-5 p-3">
+    <div className=" bg-light border border-black rounded-2 p-3">
       <form onSubmit={onSubmit}>
-        <div className=" g-2 text-light">
-          {/* FirstName */}
-          <div
-            className="mb-3 d-block mx-auto "
-            style={{
-              width: " 180",
-            }}
-          >
-            <label className="form-label" htmlFor="firstName">
-              Firstname
-            </label>
-            <input
-              className="form-control"
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={data.firstName}
-              onChange={(e) => setData({ ...data, firstName: e.target.value })}
-            />
-          </div>
-          {/* LastName */}
-          <div
-            className="mb-3 ms-2 d-block mx-auto "
-            style={{
-              width: " 180",
-            }}
-          >
-            <label className="form-label" htmlFor="lastName">
-              Lastname
-            </label>
-            <input
-              className="form-control"
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={data.lastName}
-              onChange={(e) => setData({ ...data, lastName: e.target.value })}
-            />
-          </div>
+        {/* FirstName */}
+        <div
+          className="mb-3 d-block mx-auto "
+          style={{
+            width: " 180",
+          }}
+        >
+          <label className="form-label" htmlFor="firstName">
+            Firstname
+          </label>
+          <input
+            className="form-control"
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            value={data.firstName}
+            onChange={(e) => setData({ ...data, firstName: e.target.value })}
+          />
         </div>
-        <div className=" g-2 text-light">
-          {/* Phone */}
-          <div
-            className="mb-3 d-block mx-auto "
-            style={{
-              width: " 180",
-            }}
-          >
-            <label className="form-label text-light" htmlFor="phone">
-              Phone
-            </label>
-            <input
-              className="form-control"
-              type="tel"
-              id="phone"
-              name="phone"
-              value={data.phone}
-              onChange={(e) => setData({ ...data, phone: e.target.value })}
-            />
-          </div>
-          {/* Age */}
-          <div
-            className="mb-3 ms-2 d-block mx-auto "
-            style={{
-              width: " 180",
-            }}
-          >
-            <label className="form-label" htmlFor="phone">
-              Age
-            </label>
-            <input
-              className="form-control"
-              type="text"
-              id="age"
-              name="age"
-              value={data.age}
-              onChange={(e) => setData({ ...data, age: e.target.value })}
-            />
-          </div>
+        {/* LastName */}
+        <div
+          className="mb-3  d-block mx-auto "
+          style={{
+            width: " 180",
+          }}
+        >
+          <label className="form-label" htmlFor="lastName">
+            Lastname
+          </label>
+          <input
+            className="form-control"
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            value={data.lastName}
+            onChange={(e) => setData({ ...data, lastName: e.target.value })}
+          />
+        </div>
+        {/* Phone */}
+        <div
+          className="mb-3 d-block mx-auto  "
+          style={{
+            width: " 180",
+          }}
+        >
+          <label className="form-label " htmlFor="phone">
+            Phone
+          </label>
+          <input
+            className="form-control"
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            value={data.phone}
+            onChange={(e) => setData({ ...data, phone: e.target.value })}
+          />
+        </div>
+        {/* Age */}
+        <div
+          className="mb-3 d-block mx-auto "
+          style={{
+            width: " 180",
+          }}
+        >
+          <label className="form-label" htmlFor="phone">
+            Age
+          </label>
+          <input
+            className="form-control"
+            type="text"
+            id="age"
+            name="age"
+            required
+            value={data.age}
+            onChange={(e) => setData({ ...data, age: e.target.value })}
+          />
         </div>
         {/* Email */}
         <div
-          className="mb-3 d-block mx-auto text-light"
+          className="mb-3 d-block mx-auto "
           style={{
             width: " 180",
           }}
@@ -121,6 +123,7 @@ const ContactForm = ({ addContact }) => {
             type="email"
             id="email"
             name="email"
+            required
             value={data.email}
             onChange={(e) => setData({ ...data, email: e.target.value })}
           />
@@ -133,6 +136,7 @@ const ContactForm = ({ addContact }) => {
           <select
             className="form-select"
             name="category"
+            required
             id="category"
             value={data.category}
             onChange={(e) => setData({ ...data, category: e.target.value })}
