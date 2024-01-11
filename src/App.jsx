@@ -1,9 +1,10 @@
 import React from "react";
+import Contacts from "./components/Contacts";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello React</h1>
+    <div className="vh-100 bg-light">
+      <Contacts />
     </div>
   );
 };
