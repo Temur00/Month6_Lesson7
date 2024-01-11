@@ -1,5 +1,5 @@
 import React from "react";
-import Contacts from "./components/Contacts";
+import Students from "./components/Students";
 
 const App = () => {
   return (
@@ -7,7 +7,7 @@ const App = () => {
       <h1 className="container p-2 text-light rounded">
         List of students 🧑‍🎓 👩‍🎓
       </h1>
-      <Contacts />
+      <Students />
     </div>
   );
 };

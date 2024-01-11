@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 
-const EditContact = ({ show, setShow, contactEditing, editContact }) => {
+const EditStudent = ({ show, setShow, contactEditing, editContact }) => {
   const contactComing = contactEditing ?? {
     firstName: "",
     lastName: "",
@@ -178,4 +178,4 @@ const EditContact = ({ show, setShow, contactEditing, editContact }) => {
   );
 };
 
-export default EditContact;
+export default EditStudent;

@@ -2,7 +2,7 @@ import React from "react";
 
 import Table from "react-bootstrap/Table";
 
-const ContactList = ({ contacts, deleteContact, onEdit }) => {
+const StudentList = ({ contacts, deleteContact, onEdit }) => {
   return (
     <div className="py-3 w-100">
       {contacts.map((contact) => (
@@ -54,4 +54,4 @@ const ContactList = ({ contacts, deleteContact, onEdit }) => {
   );
 };
 
-export default ContactList;
+export default StudentList;

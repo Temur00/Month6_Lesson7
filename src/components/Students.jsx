@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ContactList from "./ContactList";
-import ContactForm from "./ContactForm";
-import EditContact from "./EditContact";
+import StudentList from "./StudentList";
+import StudentForm from "./StudentForm";
+import EditStudent from "./EditStudent";
 
-const Contacts = () => {
+const Students = () => {
   const contactsLocal = JSON.parse(localStorage.getItem("contacts")) || [];
   const [showFavorite, setShowFavorite] = useState(false);
   const [contacts, setContacts] = useState(contactsLocal);
@@ -121,7 +121,7 @@ const Contacts = () => {
               Graduated({contacts.filter((cn) => cn.favorite).length})
             </button>
           </div>
-          <ContactList
+          <StudentList
             contacts={
               showFavorite
                 ? contactsToSend.filter((cn) => cn.favorite)
@@ -132,8 +132,8 @@ const Contacts = () => {
           />
         </div>
       </div>
-      <ContactForm addContact={addContact} />
-      <EditContact
+      <StudentForm addContact={addContact} />
+      <EditStudent
         show={show}
         setShow={setShow}
         contactEditing={contactEditing}
@@ -143,4 +143,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Students;
